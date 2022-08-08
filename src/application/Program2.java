@@ -21,8 +21,12 @@ public class Program2 {
 		System.out.println("Update completed! ");
 		
 		System.out.println("=== Test Three: Delete test ===");
-		depDao.deleteById(8);
+		depDao.deleteById(16);
 		System.out.println("Delete completed!");
+		
+		System.out.println("=== Test Four: FindById test ===");
+		dep = depDao.findById(1);
+		System.out.println(dep);
 	}
 
 }
