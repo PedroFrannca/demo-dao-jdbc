@@ -22,7 +22,13 @@ public class Program {
 		List<Seller> list = sellerDao.findByDepartment(department);
 		for(Seller a:list)
 			System.out.println(a);
-
+		
+		System.out.println("=== Test three: Seller findAll ===");
+		list = sellerDao.findAll();
+		for(Seller a: list) {
+			System.out.println(a);
+		}
+		
 	}
 
 }
