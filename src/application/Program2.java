@@ -19,6 +19,10 @@ public class Program2 {
 		Department dep2 = new Department(7, "food");
 		depDao.update(dep2);
 		System.out.println("Update completed! ");
+		
+		System.out.println("=== Test Three: Delete test ===");
+		depDao.deleteById(8);
+		System.out.println("Delete completed!");
 	}
 
 }
