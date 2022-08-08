@@ -1,5 +1,8 @@
 package application;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
@@ -21,12 +24,19 @@ public class Program2 {
 		System.out.println("Update completed! ");
 		
 		System.out.println("=== Test Three: Delete test ===");
-		depDao.deleteById(16);
+		depDao.deleteById(21);
 		System.out.println("Delete completed!");
 		
 		System.out.println("=== Test Four: FindById test ===");
 		dep = depDao.findById(1);
 		System.out.println(dep);
+		
+		System.out.println("=== Test Five: FindById test ===");
+		List<Department> list = new ArrayList<>();
+		list = depDao.findAll();
+		for(Department a: list) {
+			System.out.println(a);
+		}
 	}
 
 }
